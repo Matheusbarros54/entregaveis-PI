@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Simulador Financeiro</title>
+		<link rel="stylesheet" href="Calculadora Financeira.css" />
+	</head>
+
+	<body>
+		<div class="pai">
+			<h1>Simulador Financeiro</h1>
+			<div class="inputs">
+				<div class="inputs1">
+					<span class="span">Custo Médio da Embalagem por Unidade(R$):</span
+					><input
+						type="number"
+						id="input_custo"
+						placeholder="*Embalagem por Unidade" />
+					<br />
+					<br />
+					<span class="span">Volume de Produção Mensal(unidades):</span
+					><input
+						type="number"
+						id="input_producao"
+						placeholder="*Produção Mensal" /><br />
+					<br />
+				</div>
+				<div class="inputs2">
+					<span class="span">Custo Médio dos Alimentos (Unidade):</span
+					><input
+						type="number"
+						id="input_custo_alimento"
+						placeholder="*Custo de Produção dos Alimentos" /><br />
+					<br />
+					<span class="span">Percentual Atual de Desperdício (%):</span
+					><input
+						type="number"
+						id="input_desperdicio"
+						placeholder="*Taxa de Desperdício" /><br />
+					<br />
+				</div>
+			</div>
+			<div class="botão"><button onclick="calcular()">Analisar</button></div>
+		</div>
+
+		<div class="mensagens">
+			¨
+			<div id="div_box1" class="box1"></div>
+			<div id="div_box2" class="box2"></div>
+		</div>
+		<span class="texto_box"></span>
+	</body>
+</html>
+
+<script>
+	function calcular() {
+		var unidade = Number(input_custo.value);
+		var producao = Number(input_producao.value);
+		var desperdicio = Number(input_desperdicio.value);
+		var custo_alimento = Number(input_custo_alimento.value);
+		var total = (unidade + custo_alimento) * producao;
+		var desperdicio_antes = total * (desperdicio / 100);
+		var desperdicio_depois = total * (desperdicio / 100 *[0.9]);
+		var economia = desperdicio_antes - desperdicio_depois;
+
+		// var faturamento_depois = desperdicio_depois - energia_depois - custo_retrabalho_depois
+
+		// div_box1.innerHTML = `<span class="texto_box"><br>Antes da implementação do projeto:<br> <br> Custo por unidade: R$ ${unidade} <br><br> Produção mensal: R$ ${producao} <br><br> Faturamento Bruto (anual): R$ ${producao_anual}<br><br> Lucro: R$ ${lucro_total} </span>`
+
+		div_box1.innerHTML = `<br> <span class="texto_box">Custo por unidade: R$ ${unidade} <br><br> Produção mensal: R$ ${producao} <br> <br> Custo Médio dos Alimentos R$${custo_alimento} <br><br> Faturamento Bruto (mensal): R$ ${total} </span>`;
+
+		div_box2.innerHTML = `<br> <span class="texto_box"> Valor desperdiçado: R$${desperdicio_antes} <br> <br> Após a implementação de nosso projeto Embatech,<br><br>  contendo um monitoramento acertivo das máquinas, <br> <br> sua empresa irá economizar R$${economia} </span>`;
+	}
+</script>
+<!-- Antes da implementação do projeto:<br><br> Custo por unidade R$0 <br><br> Produção mensal R$ ${producao} <br><br> Faturamento Bruto (anual) R$0<br><br> Lucro R$0 <br><br> <br> Depois da implementação do projeto seu lucro irá de R$0 para R$0 <br> <br> Totalizando um aumento de 0, e economizando R$0  <br> <br>  -->

@@ -1,0 +1,119 @@
+body {
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    color: white;
+    background-image: url(paginacadastro.png);
+    background-size: cover;
+}
+
+#header {
+    color: #fff;
+}
+
+.pai{
+    margin-top: 15px;
+    width: 75%;
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to top, #161619, #130701);
+    border-radius: 30px;
+    border: solid 3px orange;
+}
+.inputs {
+    width: 80%;
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to top, #161619, #130701);
+}
+.inputs1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.inputs2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botão {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+}
+
+
+input {
+    color: black;
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button {
+    background: linear-gradient(to bottom,rgb(253, 173, 2)0, #ff5f0f);
+    color: #fff;
+    border-radius: 16px;
+    font-size: 18px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border: solid 2px black
+}
+
+button:hover {
+    background: linear-gradient(to bottom,#ff5f0f, rgb(253, 173, 2)0);
+}
+
+.mensagens {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    margin-top: 10px;
+}
+.box1 {
+    background: linear-gradient(to top, #03024c, #28024c);
+    width: 50%;
+    margin-right: 15px;
+    padding-left: 10px;
+    border-radius: 8px;
+    padding-bottom: 15px;
+}
+
+.box2 {
+    background: linear-gradient(to top, #03024c, #28024c);
+    width: 50%;
+    margin-left: 15px;
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+.texto_box {
+    font-size:15px
+}
+
